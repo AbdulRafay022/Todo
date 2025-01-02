@@ -24,7 +24,10 @@ const todoSlice = createSlice({
       state.value = "";
     },
     deleteTodo(state, action) {
-      state.todos = state.todos.filter((_, i) => i !== action.payload);
+      // eslint-disable-next-line no-restricted-globals
+      if (confirm("Are you sure You want to delete todo?")) {
+        state.todos = state.todos.filter((_, i) => i !== action.payload);
+      }
     },
     darkMode(state) {
       state.isDark = !state.isDark;

@@ -14,7 +14,7 @@ function App() {
   const { todos, value, isDark } = useSelector((store) => store.todo);
   return (
     <div
-      className={`min-h-screen transition-all duration-700 ease-in-out p-2  ${
+      className={`min-h-screen transition-all duration-700 ease-in-out p-4  ${
         isDark
           ? "bg-gradient-to-br from-[#0A1128] via-[#003366] to-[#005f73] bg-[length:200%_200%] bg-[position:0_0] text-white"
           : "bg-gradient-to-br from-[#D9E8F6] via-[#ffE8c1] to-[#C1E1DC] bg-[length:200%_200%] bg-[position:100%_100%]"
@@ -83,7 +83,7 @@ function App() {
                 isDark
                   ? "bg-navy-blue text-white rounded-full"
                   : "bg-[rgba(255,240,193,0.5)] text-gray-700 rounded-md"
-              }  mx-auto  hover:bg-opacity-40 hover:scale-105 hover:-translate-x-1 transition-all  duration-700`}
+              }  mx-auto  hover:bg-opacity-40 hover:scale-105 md:hover:-translate-x-1 transition-all  duration-700`}
             >
               <input
                 type="checkbox"
