@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { darkMode } from "../features/todoSlice";
-import iconMoon from "../icon-moon.svg";
-import iconSun from "../icon-sun.svg";
+import iconMoon from "../images/icon-moon.svg";
+import iconSun from "../images/icon-sun.svg";
 
 function Title() {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ function Title() {
 
       {!isDark ? (
         <img
-          src={iconMoon}
+          src="https://frontends.udemycdn.com/components/auth/desktop-illustration-step-2-x1.webp"
           alt={iconMoon}
           className="ml-auto cursor-pointer"
           onClick={() => dispatch(darkMode())}
