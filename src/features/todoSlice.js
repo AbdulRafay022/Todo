@@ -24,8 +24,14 @@ const todoSlice = createSlice({
       state.value = "";
     },
     deleteTodo(state, action) {
-      // eslint-disable-next-line no-restricted-globals
-      if (confirm("Are you sure You want to delete todo?")) {
+      if (
+        // eslint-disable-next-line no-restricted-globals
+        confirm(
+          `          
+                        🗑️ Deleting this To-Do will permanently remove it.
+                                      Are you sure? 🤔`
+        )
+      ) {
         state.todos = state.todos.filter((_, i) => i !== action.payload);
       }
     },
