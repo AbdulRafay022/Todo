@@ -14,7 +14,7 @@ function App() {
   const { todos, value, isDark } = useSelector((store) => store.todo);
   return (
     <div
-      className={`min-h-screen transition-all duration-700 ease-in-out  ${
+      className={`min-h-screen transition-all duration-700 ease-in-out p-2  ${
         isDark
           ? "bg-gradient-to-br from-[#0A1128] via-[#003366] to-[#005f73] bg-[length:200%_200%] bg-[position:0_0] text-white"
           : "bg-gradient-to-br from-[#D9E8F6] via-[#ffE8c1] to-[#C1E1DC] bg-[length:200%_200%] bg-[position:100%_100%]"
@@ -65,7 +65,7 @@ function App() {
             onChange={(e) => dispatch(addValue(e.target.value))}
           />
           <button
-            className={` px-4    hover:bg-opacity-60 duration-700 transition-all font-dancing ${
+            className={` px-4 hover:bg-opacity-60 duration-700 transition-all font-dancing ${
               isDark
                 ? "text-white bg-green-500 rounded-full border-2  border-blue-700"
                 : "bg-[#ddc397] rounded-md border-blue-400 border"
@@ -79,7 +79,7 @@ function App() {
           {todos.map((todo, i) => (
             <li
               key={i}
-              className={`flex text-center border group  border-blue-400 pr-1 pl-4 py-1 gap-3 items-center mb-2 w-full   ${
+              className={`flex text-center border group border-blue-400 pr-1 pl-4 py-1 gap-3 items-center mb-2 w-full   ${
                 isDark
                   ? "bg-navy-blue text-white rounded-full"
                   : "bg-[rgba(255,240,193,0.5)] text-gray-700 rounded-md"
@@ -94,7 +94,7 @@ function App() {
               </p>
               <button
                 onClick={() => dispatch(deleteTodo(i))}
-                className={`text-sm text-red-400 border  border-gray-400 px-3 ml-auto transition-all duration-700 group-hover:rotate-180 ${
+                className={`text-sm text-red-400 border border-gray-400 px-3 ml-auto transition-all duration-700 group-hover:rotate-180 ${
                   isDark ? "rounded-full" : "rounded-md"
                 }`}
               >
