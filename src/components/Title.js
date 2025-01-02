@@ -19,7 +19,7 @@ function Title() {
 
       {!isDark ? (
         <img
-          src="https://frontends.udemycdn.com/components/auth/desktop-illustration-step-2-x1.webp"
+          src={iconMoon}
           alt={iconMoon}
           className="ml-auto cursor-pointer"
           onClick={() => dispatch(darkMode())}
